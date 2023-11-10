@@ -74,10 +74,10 @@
 
         function changeDirection(event) {
             const key = event.key;
-            if ((key === "ArrowRight" || key === "Right") && direction !== "left") direction = "right";
-            if ((key === "ArrowLeft" || key === "Left") && direction !== "right") direction = "left";
-            if ((key === "ArrowUp" || key === "Up") && direction !== "down") direction = "up";
-            if ((key === "ArrowDown" || key === "Down") && direction !== "up") direction = "down";
+            if ((key === "d" || key === "D") && direction !== "left") direction = "right";
+            if ((key === "a" || key === "A") && direction !== "right") direction = "left";
+            if ((key === "w" || key === "W") && direction !== "down") direction = "up";
+            if ((key === "s" || key === "S") && direction !== "up") direction = "down";
         }
 
         function gameLoop() {
