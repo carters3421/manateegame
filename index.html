@@ -17,7 +17,7 @@
         const ctx = canvas.getContext("2d");
 
         const gridSize = 20;
-        const snake = [{ x: 10, y: 10 }];
+        let snake = [{ x: 10, y: 10 }];
         const manateeImage = new Image();
         manateeImage.src = 'manatee.png'; // Replace 'manatee.png' with your image source
 
@@ -87,10 +87,11 @@
             drawSnake();
             drawManatee(food.x, food.y);
             checkCollision();
+            requestAnimationFrame(gameLoop);
         }
 
         generateFood();
-        const game = setInterval(gameLoop, 100); // Change the game speed as needed
+        const game = requestAnimationFrame(gameLoop);
 
         document.addEventListener("keydown", changeDirection);
     </script>
